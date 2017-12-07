@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20171207 08:31:36.907" generator="Robot 3.0.2 (Python 2.7.5 on linux2)">
+<suite source="/home/andrei/testing_task/framework/TS001.robot" id="s1" name="TS001">
+<test id="s1-t1" name="TC0001 Check balance after service addition">
+<kw type="setup" name="Main Test Setup" library="Setup_teardown">
+<kw name="Start Application" library="keywords">
+<doc>Main setup function for test case</doc>
+<msg timestamp="20171207 08:31:37.002" level="INFO">
+2017-12-07 08:31:37.002: Starting 'testing_web_1' application...</msg>
+<msg timestamp="20171207 08:31:37.002" level="INFO">
+2017-12-07 08:31:37.002: Executing 'docker-compose up -d' command...</msg>
+<msg timestamp="20171207 08:31:37.621" level="INFO">
+2017-12-07 08:31:37.621: Application successfully started</msg>
+<status status="PASS" endtime="20171207 08:31:37.622" starttime="20171207 08:31:37.002"></status>
+</kw>
+<status status="PASS" endtime="20171207 08:31:37.622" starttime="20171207 08:31:37.002"></status>
+</kw>
+<kw name="Log Step" library="keywords">
+<doc>Steps logger</doc>
+<arguments>
+<arg>=== Step 1. Create connection to database ===</arg>
+</arguments>
+<msg timestamp="20171207 08:31:37.622" level="INFO">
+2017-12-07 08:31:37.622: === Step 1. Create connection to database ===</msg>
+<status status="PASS" endtime="20171207 08:31:37.622" starttime="20171207 08:31:37.622"></status>
+</kw>
+<kw name="Connect To Database" library="keywords">
+<doc>Function to connect to database</doc>
+<arguments>
+<arg>path_to_db=../testing/web/clients.db</arg>
+</arguments>
+<assign>
+<var>${database}</var>
+</assign>
+<msg timestamp="20171207 08:31:37.623" level="INFO">
+2017-12-07 08:31:37.623: Connecting to database...</msg>
+<msg timestamp="20171207 08:31:37.640" level="INFO">${database} = &lt;sqlite3.Cursor object at 0x2592d50&gt;</msg>
+<status status="PASS" endtime="20171207 08:31:37.640" starttime="20171207 08:31:37.622"></status>
+</kw>
+<kw name="Log Step" library="keywords">
+<doc>Steps logger</doc>
+<arguments>
+<arg>=== Step 2. Select client with positive balance ===</arg>
+</arguments>
+<msg timestamp="20171207 08:31:37.641" level="INFO">
+2017-12-07 08:31:37.640: === Step 2. Select client with positive balance ===</msg>
+<status status="PASS" endtime="20171207 08:31:37.641" starttime="20171207 08:31:37.640"></status>
+</kw>
+<kw name="Select Client With Positive Balance" library="keywords">
+<doc>Function to select any client with positive balance</doc>
+<arguments>
+<arg>${database}</arg>
+<arg>default_balance=5</arg>
+</arguments>
+<assign>
+<var>${client_id}</var>
+</assign>
+<msg timestamp="20171207 08:31:37.641" level="INFO">
+2017-12-07 08:31:37.641: Selecting client with positive balance from database...</msg>
+<msg timestamp="20171207 08:31:37.664" level="INFO">${client_id} = 3</msg>
+<status status="PASS" endtime="20171207 08:31:37.664" starttime="20171207 08:31:37.641"></status>
+</kw>
+<kw name="Select Clients Balance" library="keywords">
+<doc>Function to get client balance</doc>
+<arguments>
+<arg>${client_id}</arg>
+<arg>${database}</arg>
+</arguments>
+<assign>
+<var>${client_balance}</var>
+</assign>
+<msg timestamp="20171207 08:31:37.664" level="INFO">
+2017-12-07 08:31:37.664: Selecting balance for client with client_id=3...</msg>
+<msg timestamp="20171207 08:31:37.674" level="INFO">${client_balance} = 3.5</msg>
+<status status="PASS" endtime="20171207 08:31:37.674" starttime="20171207 08:31:37.664"></status>
+</kw>
+<kw name="Log Step" library="keywords">
+<doc>Steps logger</doc>
+<arguments>
+<arg>=== Step 3. Select client enabled services ===</arg>
+</arguments>
+<msg timestamp="20171207 08:31:37.675" level="INFO">
+2017-12-07 08:31:37.675: === Step 3. Select client enabled services ===</msg>
+<status status="PASS" endtime="20171207 08:31:37.675" starttime="20171207 08:31:37.675"></status>
+</kw>
+<kw name="Get Client Services" library="keywords">
+<doc>Function to get clients enabled services</doc>
+<arguments>
+<arg>${client_id}</arg>
+</arguments>
+<assign>
+<var>${enabled_services}</var>
+</assign>
+<msg timestamp="20171207 08:31:37.700" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:37.710" level="INFO">${enabled_services} = [1]</msg>
+<status status="PASS" endtime="20171207 08:31:37.710" starttime="20171207 08:31:37.675"></status>
+</kw>
+<kw name="Log Step" library="keywords">
+<doc>Steps logger</doc>
+<arguments>
+<arg>=== Step 4. Get all services ===</arg>
+</arguments>
+<msg timestamp="20171207 08:31:37.711" level="INFO">
+2017-12-07 08:31:37.710: === Step 4. Get all services ===</msg>
+<status status="PASS" endtime="20171207 08:31:37.711" starttime="20171207 08:31:37.710"></status>
+</kw>
+<kw name="Get List Of All Services" library="keywords">
+<doc>Function to get list of all services</doc>
+<assign>
+<var>${all_services}</var>
+</assign>
+<msg timestamp="20171207 08:31:37.712" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:37.717" level="INFO">${all_services} = [{u'cost': 1.2, u'id': 1, u'name': u'Service #1'}, {u'cost': 0.35, u'id': 2, u'name': u'Service #2'}, {u'cost': 0.15, u'id': 3, u'name': u'Service #3'}, {u'cost': 0.15, u'id': 4, u'name': u'Service #4...</msg>
+<status status="PASS" endtime="20171207 08:31:37.717" starttime="20171207 08:31:37.711"></status>
+</kw>
+<kw name="Log Step" library="keywords">
+<doc>Steps logger</doc>
+<arguments>
+<arg>=== Step 5. Get not enabled service for client ===</arg>
+</arguments>
+<msg timestamp="20171207 08:31:37.717" level="INFO">
+2017-12-07 08:31:37.717: === Step 5. Get not enabled service for client ===</msg>
+<status status="PASS" endtime="20171207 08:31:37.717" starttime="20171207 08:31:37.717"></status>
+</kw>
+<kw name="Get Not Enabled Service Id" library="keywords">
+<doc>Function to get id of not enabled service</doc>
+<arguments>
+<arg>${enabled_services}</arg>
+<arg>${all_services}</arg>
+</arguments>
+<assign>
+<var>${not_enabled_service_id}</var>
+</assign>
+<msg timestamp="20171207 08:31:37.718" level="INFO">${not_enabled_service_id} = 5</msg>
+<status status="PASS" endtime="20171207 08:31:37.718" starttime="20171207 08:31:37.717"></status>
+</kw>
+<kw name="Get Service Cost" library="keywords">
+<doc>Function to get cost of service</doc>
+<arguments>
+<arg>${not_enabled_service_id}</arg>
+</arguments>
+<assign>
+<var>${not_enabled_service_cost}</var>
+</assign>
+<msg timestamp="20171207 08:31:37.719" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:37.722" level="INFO">${not_enabled_service_cost} = 0.05</msg>
+<status status="PASS" endtime="20171207 08:31:37.722" starttime="20171207 08:31:37.718"></status>
+</kw>
+<kw name="Log Step" library="keywords">
+<doc>Steps logger</doc>
+<arguments>
+<arg>=== Step 6. Enable service for client ===</arg>
+</arguments>
+<msg timestamp="20171207 08:31:37.722" level="INFO">
+2017-12-07 08:31:37.722: === Step 6. Enable service for client ===</msg>
+<status status="PASS" endtime="20171207 08:31:37.722" starttime="20171207 08:31:37.722"></status>
+</kw>
+<kw name="Enable Service For Client Id" library="keywords">
+<doc>Function to set service enabled for specified client</doc>
+<arguments>
+<arg>${client_id}</arg>
+<arg>${not_enabled_service_id}</arg>
+</arguments>
+<assign>
+<var>${ex_code}</var>
+</assign>
+<msg timestamp="20171207 08:31:37.723" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:37.728" level="INFO">${ex_code} = 202</msg>
+<status status="PASS" endtime="20171207 08:31:37.728" starttime="20171207 08:31:37.722"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${ex_code}</arg>
+<arg>202</arg>
+</arguments>
+<msg timestamp="20171207 08:31:37.728" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20171207 08:31:37.728" starttime="20171207 08:31:37.728"></status>
+</kw>
+<kw name="Log Step" library="keywords">
+<doc>Steps logger</doc>
+<arguments>
+<arg>=== Step 7. Wait for service is enabled ===</arg>
+</arguments>
+<msg timestamp="20171207 08:31:37.729" level="INFO">
+2017-12-07 08:31:37.729: === Step 7. Wait for service is enabled ===</msg>
+<status status="PASS" endtime="20171207 08:31:37.729" starttime="20171207 08:31:37.729"></status>
+</kw>
+<kw name="Wait For Service Is Enabled" library="keywords">
+<doc>Function to wait until service is enabled for specified client</doc>
+<arguments>
+<arg>${client_id}</arg>
+<arg>${not_enabled_service_id}</arg>
+<arg>top_attempts=30</arg>
+<arg>sleep_time=2</arg>
+</arguments>
+<msg timestamp="20171207 08:31:37.730" level="INFO">
+2017-12-07 08:31:37.730: Start waiting for service 5 is enabled for client 3</msg>
+<msg timestamp="20171207 08:31:37.730" level="INFO">
+2017-12-07 08:31:37.730: 30 attempts left</msg>
+<msg timestamp="20171207 08:31:37.730" level="INFO">
+2017-12-07 08:31:37.730: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:37.731" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:37.735" level="INFO">
+2017-12-07 08:31:37.735: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:37.735" level="INFO">
+2017-12-07 08:31:37.735: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:37.735" level="INFO">
+2017-12-07 08:31:37.735: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:31:39.737" level="INFO">
+2017-12-07 08:31:39.737: 29 attempts left</msg>
+<msg timestamp="20171207 08:31:39.737" level="INFO">
+2017-12-07 08:31:39.737: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:39.738" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:39.741" level="INFO">
+2017-12-07 08:31:39.741: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:39.741" level="INFO">
+2017-12-07 08:31:39.741: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:39.741" level="INFO">
+2017-12-07 08:31:39.741: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:31:41.742" level="INFO">
+2017-12-07 08:31:41.742: 28 attempts left</msg>
+<msg timestamp="20171207 08:31:41.742" level="INFO">
+2017-12-07 08:31:41.742: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:41.743" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:41.745" level="INFO">
+2017-12-07 08:31:41.745: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:41.746" level="INFO">
+2017-12-07 08:31:41.746: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:41.746" level="INFO">
+2017-12-07 08:31:41.746: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:31:43.746" level="INFO">
+2017-12-07 08:31:43.746: 27 attempts left</msg>
+<msg timestamp="20171207 08:31:43.746" level="INFO">
+2017-12-07 08:31:43.746: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:43.747" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:43.750" level="INFO">
+2017-12-07 08:31:43.750: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:43.750" level="INFO">
+2017-12-07 08:31:43.750: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:43.750" level="INFO">
+2017-12-07 08:31:43.750: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:31:45.752" level="INFO">
+2017-12-07 08:31:45.752: 26 attempts left</msg>
+<msg timestamp="20171207 08:31:45.752" level="INFO">
+2017-12-07 08:31:45.752: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:45.753" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:45.756" level="INFO">
+2017-12-07 08:31:45.756: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:45.756" level="INFO">
+2017-12-07 08:31:45.756: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:45.756" level="INFO">
+2017-12-07 08:31:45.756: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:31:47.757" level="INFO">
+2017-12-07 08:31:47.757: 25 attempts left</msg>
+<msg timestamp="20171207 08:31:47.758" level="INFO">
+2017-12-07 08:31:47.757: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:47.758" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:47.761" level="INFO">
+2017-12-07 08:31:47.761: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:47.761" level="INFO">
+2017-12-07 08:31:47.761: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:47.761" level="INFO">
+2017-12-07 08:31:47.761: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:31:49.763" level="INFO">
+2017-12-07 08:31:49.763: 24 attempts left</msg>
+<msg timestamp="20171207 08:31:49.763" level="INFO">
+2017-12-07 08:31:49.763: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:49.764" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:49.767" level="INFO">
+2017-12-07 08:31:49.767: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:49.767" level="INFO">
+2017-12-07 08:31:49.767: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:49.767" level="INFO">
+2017-12-07 08:31:49.767: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:31:51.767" level="INFO">
+2017-12-07 08:31:51.767: 23 attempts left</msg>
+<msg timestamp="20171207 08:31:51.767" level="INFO">
+2017-12-07 08:31:51.767: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:51.768" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:51.771" level="INFO">
+2017-12-07 08:31:51.771: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:51.771" level="INFO">
+2017-12-07 08:31:51.771: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:51.771" level="INFO">
+2017-12-07 08:31:51.771: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:31:53.773" level="INFO">
+2017-12-07 08:31:53.773: 22 attempts left</msg>
+<msg timestamp="20171207 08:31:53.773" level="INFO">
+2017-12-07 08:31:53.773: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:53.774" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:53.777" level="INFO">
+2017-12-07 08:31:53.777: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:53.777" level="INFO">
+2017-12-07 08:31:53.777: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:53.777" level="INFO">
+2017-12-07 08:31:53.777: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:31:55.779" level="INFO">
+2017-12-07 08:31:55.779: 21 attempts left</msg>
+<msg timestamp="20171207 08:31:55.779" level="INFO">
+2017-12-07 08:31:55.779: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:55.780" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:55.783" level="INFO">
+2017-12-07 08:31:55.783: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:55.783" level="INFO">
+2017-12-07 08:31:55.783: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:55.783" level="INFO">
+2017-12-07 08:31:55.783: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:31:57.784" level="INFO">
+2017-12-07 08:31:57.784: 20 attempts left</msg>
+<msg timestamp="20171207 08:31:57.784" level="INFO">
+2017-12-07 08:31:57.784: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:57.785" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:57.788" level="INFO">
+2017-12-07 08:31:57.788: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:57.788" level="INFO">
+2017-12-07 08:31:57.788: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:57.788" level="INFO">
+2017-12-07 08:31:57.788: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:31:59.791" level="INFO">
+2017-12-07 08:31:59.791: 19 attempts left</msg>
+<msg timestamp="20171207 08:31:59.792" level="INFO">
+2017-12-07 08:31:59.791: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:31:59.792" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:31:59.795" level="INFO">
+2017-12-07 08:31:59.795: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:31:59.795" level="INFO">
+2017-12-07 08:31:59.795: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:31:59.795" level="INFO">
+2017-12-07 08:31:59.795: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:32:01.798" level="INFO">
+2017-12-07 08:32:01.797: 18 attempts left</msg>
+<msg timestamp="20171207 08:32:01.798" level="INFO">
+2017-12-07 08:32:01.798: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:32:01.798" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:32:01.802" level="INFO">
+2017-12-07 08:32:01.802: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:32:01.802" level="INFO">
+2017-12-07 08:32:01.802: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:32:01.802" level="INFO">
+2017-12-07 08:32:01.802: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:32:03.803" level="INFO">
+2017-12-07 08:32:03.803: 17 attempts left</msg>
+<msg timestamp="20171207 08:32:03.803" level="INFO">
+2017-12-07 08:32:03.803: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:32:03.804" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:32:03.806" level="INFO">
+2017-12-07 08:32:03.806: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:32:03.807" level="INFO">
+2017-12-07 08:32:03.807: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:32:03.807" level="INFO">
+2017-12-07 08:32:03.807: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:32:05.807" level="INFO">
+2017-12-07 08:32:05.807: 16 attempts left</msg>
+<msg timestamp="20171207 08:32:05.807" level="INFO">
+2017-12-07 08:32:05.807: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:32:05.808" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:32:05.812" level="INFO">
+2017-12-07 08:32:05.812: Checking service 5 in client enabled services [1]</msg>
+<msg timestamp="20171207 08:32:05.812" level="INFO">
+2017-12-07 08:32:05.812: Service 5 is not enabled for this client</msg>
+<msg timestamp="20171207 08:32:05.812" level="INFO">
+2017-12-07 08:32:05.812: Waiting 2 seconds...</msg>
+<msg timestamp="20171207 08:32:07.814" level="INFO">
+2017-12-07 08:32:07.814: 15 attempts left</msg>
+<msg timestamp="20171207 08:32:07.814" level="INFO">
+2017-12-07 08:32:07.814: Checking service 5 in client 3 enabled services</msg>
+<msg timestamp="20171207 08:32:07.815" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:32:07.818" level="INFO">
+2017-12-07 08:32:07.817: Checking service 5 in client enabled services [1, 5]</msg>
+<msg timestamp="20171207 08:32:07.818" level="INFO">
+2017-12-07 08:32:07.818: Service 5 is enabled for client 3</msg>
+<status status="PASS" endtime="20171207 08:32:07.818" starttime="20171207 08:31:37.729"></status>
+</kw>
+<kw name="Get Client Services" library="keywords">
+<doc>Function to get clients enabled services</doc>
+<arguments>
+<arg>${client_id}</arg>
+</arguments>
+<assign>
+<var>${enabled_services2}</var>
+</assign>
+<msg timestamp="20171207 08:32:07.819" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171207 08:32:07.822" level="INFO">${enabled_services2} = [1, 5]</msg>
+<status status="PASS" endtime="20171207 08:32:07.822" starttime="20171207 08:32:07.818"></status>
+</kw>
+<kw name="Log Step" library="keywords">
+<doc>Steps logger</doc>
+<arguments>
+<arg>=== Step 8. Get client balance ===</arg>
+</arguments>
+<msg timestamp="20171207 08:32:07.822" level="INFO">
+2017-12-07 08:32:07.822: === Step 8. Get client balance ===</msg>
+<status status="PASS" endtime="20171207 08:32:07.822" starttime="20171207 08:32:07.822"></status>
+</kw>
+<kw name="Select Clients Balance" library="keywords">
+<doc>Function to get client balance</doc>
+<arguments>
+<arg>${client_id}</arg>
+<arg>${database}</arg>
+</arguments>
+<assign>
+<var>${final_client_balance}</var>
+</assign>
+<msg timestamp="20171207 08:32:07.823" level="INFO">
+2017-12-07 08:32:07.823: Selecting balance for client with client_id=3...</msg>
+<msg timestamp="20171207 08:32:07.824" level="INFO">${final_client_balance} = 3.5</msg>
+<status status="PASS" endtime="20171207 08:32:07.824" starttime="20171207 08:32:07.822"></status>
+</kw>
+<kw name="Log Step" library="keywords">
+<doc>Steps logger</doc>
+<arguments>
+<arg>=== Step 9. Check that balance is correct ===</arg>
+</arguments>
+<msg timestamp="20171207 08:32:07.825" level="INFO">
+2017-12-07 08:32:07.825: === Step 9. Check that balance is correct ===</msg>
+<status status="PASS" endtime="20171207 08:32:07.825" starttime="20171207 08:32:07.824"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${client_balance}-${not_enabled_service_cost}</arg>
+</arguments>
+<assign>
+<var>${calc_final_balance}</var>
+</assign>
+<msg timestamp="20171207 08:32:07.825" level="INFO">${calc_final_balance} = 3.45</msg>
+<status status="PASS" endtime="20171207 08:32:07.825" starttime="20171207 08:32:07.825"></status>
+</kw>
+<kw name="Compare Results" library="keywords">
+<doc>Function to compare actual result with expected result</doc>
+<arguments>
+<arg>${final_client_balance}</arg>
+<arg>${calc_final_balance}</arg>
+</arguments>
+<msg timestamp="20171207 08:32:07.826" level="INFO">
+2017-12-07 08:32:07.826: Compare actual result 3.5 with calculated result 3.45</msg>
+<msg timestamp="20171207 08:32:07.826" level="INFO">
+2017-12-07 08:32:07.826: 3.5 and 3.45 should be equal</msg>
+<msg timestamp="20171207 08:32:07.838" level="FAIL">MyError: 3.5 != 3.45, but should</msg>
+<status status="FAIL" endtime="20171207 08:32:07.838" starttime="20171207 08:32:07.825"></status>
+</kw>
+<kw type="teardown" name="Main Test Teardown" library="Setup_teardown">
+<kw name="Stop Application" library="keywords">
+<doc>Main teardown function for test case</doc>
+<msg timestamp="20171207 08:32:07.839" level="INFO">
+2017-12-07 08:32:07.839: Stopping 'testing_web_1' application...</msg>
+<msg timestamp="20171207 08:32:07.840" level="INFO">
+2017-12-07 08:32:07.840: Executing 'docker-compose down' command...</msg>
+<msg timestamp="20171207 08:32:18.588" level="INFO">
+2017-12-07 08:32:18.588: Application successfully stopped</msg>
+<status status="PASS" endtime="20171207 08:32:18.589" starttime="20171207 08:32:07.839"></status>
+</kw>
+<status status="PASS" endtime="20171207 08:32:18.589" starttime="20171207 08:32:07.839"></status>
+</kw>
+<status status="FAIL" endtime="20171207 08:32:18.589" critical="yes" starttime="20171207 08:31:37.001">MyError: 3.5 != 3.45, but should</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" endtime="20171207 08:32:18.590" starttime="20171207 08:31:36.909"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="TS001" pass="0">TS001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
