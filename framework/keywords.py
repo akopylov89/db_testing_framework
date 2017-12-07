@@ -53,6 +53,8 @@ def start_application():
     logger_debug("Starting 'testing_web_1' application...")
     path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     os.chdir("{0}/testing".format(path))
+    logger_debug("Executing 'docker-compose build' command...")
+    subprocess_send_command(["docker-compose", "build"])
     logger_debug("Executing 'docker-compose up -d' command...")
     subprocess_send_command(["docker-compose", "up", "-d"])
     logger_debug("Application successfully started")
