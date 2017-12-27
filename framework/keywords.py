@@ -323,36 +323,36 @@ def compare_results(actual_result, expected_result):
                      .format(actual_result, expected_result))
 
 
-def email_results(sender_email, recipients_email, path_to_log, result):
-    path_to_log = path_to_log.encode("cp1252")
-    msg = MIMEMultipart('alternative')
-    msg['Subject'] = "{0} database test results".format(result)
-    msg['From'] = sender_email
-    msg['To'] = recipients_email.encode("cp1252")
-
-    text = "Hello colleagues!\nHere are the results of database testing\n"
-    html = """\
-    <html>
-      <head></head>
-      <body>
-        <p>Robot log file is attached to this e-mail<br>
-        </p>
-      </body>
-    </html>
-    """
-    part1 = MIMEText(text, 'plain')
-    part2 = MIMEText(html, 'html')
-    msg.attach(part1)
-    msg.attach(part2)
-    part = MIMEApplication(open(str(path_to_log), "rb").read())
-    part.add_header('Content-Disposition', 'attachment',
-                    filename=str(path_to_log))
-    msg.attach(part)
-    s = smtplib.SMTP("smtp.gmail.com:587")
-    s.starttls()
-    s.login("e-mail", "password")
-    logger_debug('Sending e-mail to {0}'.format(recipients_email))
-    s.sendmail(sender_email, recipients_email, msg.as_string())
-    s.quit()
+# def email_results(sender_email, recipients_email, path_to_log, result):
+#     path_to_log = path_to_log.encode("cp1252")
+#     msg = MIMEMultipart('alternative')
+#     msg['Subject'] = "{0} database test results".format(result)
+#     msg['From'] = sender_email
+#     msg['To'] = recipients_email.encode("cp1252")
+#
+#     text = "Hello colleagues!\nHere are the results of database testing\n"
+#     html = """\
+#     <html>
+#       <head></head>
+#       <body>
+#         <p>Robot log file is attached to this e-mail<br>
+#         </p>
+#       </body>
+#     </html>
+#     """
+#     part1 = MIMEText(text, 'plain')
+#     part2 = MIMEText(html, 'html')
+#     msg.attach(part1)
+#     msg.attach(part2)
+#     part = MIMEApplication(open(str(path_to_log), "rb").read())
+#     part.add_header('Content-Disposition', 'attachment',
+#                     filename=str(path_to_log))
+#     msg.attach(part)
+#     s = smtplib.SMTP("smtp.gmail.com:587")
+#     s.starttls()
+#     s.login("e-mail", "password")
+#     logger_debug('Sending e-mail to {0}'.format(recipients_email))
+#     s.sendmail(sender_email, recipients_email, msg.as_string())
+#     s.quit()
 
 

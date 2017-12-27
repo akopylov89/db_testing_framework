@@ -5,7 +5,7 @@ Library  keywords.py
 Resource  Setup_teardown.robot
 Test Setup  Main Test Setup
 Test Teardown  Main Test Teardown
-Suite Teardown  Main Teardown
+#Suite Teardown  Main Teardown
 
 *** Test Cases ***
 TC0001 Check balance after service addition
