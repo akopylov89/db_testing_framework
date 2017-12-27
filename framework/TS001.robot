@@ -5,9 +5,11 @@ Library  keywords.py
 Resource  Setup_teardown.robot
 Test Setup  Main Test Setup
 Test Teardown  Main Test Teardown
+Suite Teardown  Main Teardown
 
 *** Test Cases ***
 TC0001 Check balance after service addition
+    [Tags]  TC0001
     log_step  === Step 1. Create connection to database ===
     ${database} =  connect_to_database  path_to_db=../testing/web/clients.db
 

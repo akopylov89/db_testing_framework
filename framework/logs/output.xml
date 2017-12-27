@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20171207 08:57:23.607" generator="Robot 3.0.2 (Python 2.7.5 on linux2)">
+<robot generated="20171227 04:33:04.014" generator="Robot 3.0.2 (Python 2.7.5 on linux2)">
 <suite source="/home/andrei/testing_task/framework/TS001.robot" id="s1" name="TS001">
 <test id="s1-t1" name="TC0001 Check balance after service addition">
 <kw type="setup" name="Main Test Setup" library="Setup_teardown">
 <kw name="Start Application" library="keywords">
 <doc>Main setup function for test case</doc>
-<msg timestamp="20171207 08:57:23.699" level="INFO">
-2017-12-07 08:57:23.699: Starting 'testing_web_1' application...</msg>
-<msg timestamp="20171207 08:57:23.700" level="INFO">
-2017-12-07 08:57:23.700: Executing 'docker-compose build' command...</msg>
-<msg timestamp="20171207 08:57:23.926" level="INFO">
-2017-12-07 08:57:23.926: Executing 'docker-compose up -d' command...</msg>
-<msg timestamp="20171207 08:57:24.479" level="INFO">
-2017-12-07 08:57:24.479: Application successfully started</msg>
-<status status="PASS" endtime="20171207 08:57:24.480" starttime="20171207 08:57:23.699"></status>
+<msg timestamp="20171227 04:33:04.109" level="INFO">
+2017-12-27 04:33:04.109: Starting 'testing_web_1' application...</msg>
+<msg timestamp="20171227 04:33:04.110" level="INFO">
+2017-12-27 04:33:04.110: Executing 'docker-compose build' command...</msg>
+<msg timestamp="20171227 04:33:04.301" level="INFO">
+2017-12-27 04:33:04.300: Executing 'docker-compose up -d' command...</msg>
+<msg timestamp="20171227 04:33:04.892" level="INFO">
+2017-12-27 04:33:04.892: Application successfully started</msg>
+<status status="PASS" endtime="20171227 04:33:04.894" starttime="20171227 04:33:04.109"></status>
 </kw>
-<status status="PASS" endtime="20171207 08:57:24.480" starttime="20171207 08:57:23.699"></status>
+<status status="PASS" endtime="20171227 04:33:04.894" starttime="20171227 04:33:04.108"></status>
 </kw>
 <kw name="Log Step" library="keywords">
 <doc>Steps logger</doc>
 <arguments>
 <arg>=== Step 1. Create connection to database ===</arg>
 </arguments>
-<msg timestamp="20171207 08:57:24.480" level="INFO">
-2017-12-07 08:57:24.480: === Step 1. Create connection to database ===</msg>
-<status status="PASS" endtime="20171207 08:57:24.481" starttime="20171207 08:57:24.480"></status>
+<msg timestamp="20171227 04:33:04.896" level="INFO">
+2017-12-27 04:33:04.896: === Step 1. Create connection to database ===</msg>
+<status status="PASS" endtime="20171227 04:33:04.897" starttime="20171227 04:33:04.894"></status>
 </kw>
 <kw name="Connect To Database" library="keywords">
 <doc>Function to connect to database</doc>
@@ -34,19 +34,19 @@
 <assign>
 <var>${database}</var>
 </assign>
-<msg timestamp="20171207 08:57:24.481" level="INFO">
-2017-12-07 08:57:24.481: Connecting to database...</msg>
-<msg timestamp="20171207 08:57:24.506" level="INFO">${database} = &lt;sqlite3.Cursor object at 0x2377dc0&gt;</msg>
-<status status="PASS" endtime="20171207 08:57:24.506" starttime="20171207 08:57:24.481"></status>
+<msg timestamp="20171227 04:33:04.898" level="INFO">
+2017-12-27 04:33:04.898: Connecting to database...</msg>
+<msg timestamp="20171227 04:33:04.922" level="INFO">${database} = &lt;sqlite3.Cursor object at 0x173e8f0&gt;</msg>
+<status status="PASS" endtime="20171227 04:33:04.922" starttime="20171227 04:33:04.898"></status>
 </kw>
 <kw name="Log Step" library="keywords">
 <doc>Steps logger</doc>
 <arguments>
 <arg>=== Step 2. Select client with positive balance ===</arg>
 </arguments>
-<msg timestamp="20171207 08:57:24.507" level="INFO">
-2017-12-07 08:57:24.507: === Step 2. Select client with positive balance ===</msg>
-<status status="PASS" endtime="20171207 08:57:24.507" starttime="20171207 08:57:24.506"></status>
+<msg timestamp="20171227 04:33:04.924" level="INFO">
+2017-12-27 04:33:04.924: === Step 2. Select client with positive balance ===</msg>
+<status status="PASS" endtime="20171227 04:33:04.925" starttime="20171227 04:33:04.922"></status>
 </kw>
 <kw name="Select Client With Positive Balance" library="keywords">
 <doc>Function to select any client with positive balance</doc>
@@ -57,10 +57,10 @@
 <assign>
 <var>${client_id}</var>
 </assign>
-<msg timestamp="20171207 08:57:24.508" level="INFO">
-2017-12-07 08:57:24.507: Selecting client with positive balance from database...</msg>
-<msg timestamp="20171207 08:57:24.539" level="INFO">${client_id} = 3</msg>
-<status status="PASS" endtime="20171207 08:57:24.539" starttime="20171207 08:57:24.507"></status>
+<msg timestamp="20171227 04:33:04.926" level="INFO">
+2017-12-27 04:33:04.926: Selecting client with positive balance from database...</msg>
+<msg timestamp="20171227 04:33:04.953" level="INFO">${client_id} = 3</msg>
+<status status="PASS" endtime="20171227 04:33:04.954" starttime="20171227 04:33:04.925"></status>
 </kw>
 <kw name="Select Clients Balance" library="keywords">
 <doc>Function to get client balance</doc>
@@ -71,19 +71,19 @@
 <assign>
 <var>${client_balance}</var>
 </assign>
-<msg timestamp="20171207 08:57:24.539" level="INFO">
-2017-12-07 08:57:24.539: Selecting balance for client with client_id=3...</msg>
-<msg timestamp="20171207 08:57:24.552" level="INFO">${client_balance} = 3.5</msg>
-<status status="PASS" endtime="20171207 08:57:24.552" starttime="20171207 08:57:24.539"></status>
+<msg timestamp="20171227 04:33:04.955" level="INFO">
+2017-12-27 04:33:04.954: Selecting balance for client with client_id=3...</msg>
+<msg timestamp="20171227 04:33:04.962" level="INFO">${client_balance} = 3.5</msg>
+<status status="PASS" endtime="20171227 04:33:04.962" starttime="20171227 04:33:04.954"></status>
 </kw>
 <kw name="Log Step" library="keywords">
 <doc>Steps logger</doc>
 <arguments>
 <arg>=== Step 3. Select client enabled services ===</arg>
 </arguments>
-<msg timestamp="20171207 08:57:24.552" level="INFO">
-2017-12-07 08:57:24.552: === Step 3. Select client enabled services ===</msg>
-<status status="PASS" endtime="20171207 08:57:24.553" starttime="20171207 08:57:24.552"></status>
+<msg timestamp="20171227 04:33:04.965" level="INFO">
+2017-12-27 04:33:04.965: === Step 3. Select client enabled services ===</msg>
+<status status="PASS" endtime="20171227 04:33:04.966" starttime="20171227 04:33:04.963"></status>
 </kw>
 <kw name="Get Client Services" library="keywords">
 <doc>Function to get clients enabled services</doc>
@@ -93,36 +93,36 @@
 <assign>
 <var>${enabled_services}</var>
 </assign>
-<msg timestamp="20171207 08:57:24.566" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:24.577" level="INFO">${enabled_services} = [1]</msg>
-<status status="PASS" endtime="20171207 08:57:24.577" starttime="20171207 08:57:24.553"></status>
+<msg timestamp="20171227 04:33:04.983" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171227 04:33:05.077" level="INFO">${enabled_services} = [1]</msg>
+<status status="PASS" endtime="20171227 04:33:05.077" starttime="20171227 04:33:04.966"></status>
 </kw>
 <kw name="Log Step" library="keywords">
 <doc>Steps logger</doc>
 <arguments>
 <arg>=== Step 4. Get all services ===</arg>
 </arguments>
-<msg timestamp="20171207 08:57:24.577" level="INFO">
-2017-12-07 08:57:24.577: === Step 4. Get all services ===</msg>
-<status status="PASS" endtime="20171207 08:57:24.577" starttime="20171207 08:57:24.577"></status>
+<msg timestamp="20171227 04:33:05.079" level="INFO">
+2017-12-27 04:33:05.079: === Step 4. Get all services ===</msg>
+<status status="PASS" endtime="20171227 04:33:05.080" starttime="20171227 04:33:05.077"></status>
 </kw>
 <kw name="Get List Of All Services" library="keywords">
 <doc>Function to get list of all services</doc>
 <assign>
 <var>${all_services}</var>
 </assign>
-<msg timestamp="20171207 08:57:24.578" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:24.581" level="INFO">${all_services} = [{u'cost': 1.2, u'id': 1, u'name': u'Service #1'}, {u'cost': 0.35, u'id': 2, u'name': u'Service #2'}, {u'cost': 0.15, u'id': 3, u'name': u'Service #3'}, {u'cost': 0.15, u'id': 4, u'name': u'Service #4...</msg>
-<status status="PASS" endtime="20171207 08:57:24.581" starttime="20171207 08:57:24.577"></status>
+<msg timestamp="20171227 04:33:05.082" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171227 04:33:05.084" level="INFO">${all_services} = [{u'cost': 1.2, u'id': 1, u'name': u'Service #1'}, {u'cost': 0.35, u'id': 2, u'name': u'Service #2'}, {u'cost': 0.15, u'id': 3, u'name': u'Service #3'}, {u'cost': 0.15, u'id': 4, u'name': u'Service #4...</msg>
+<status status="PASS" endtime="20171227 04:33:05.084" starttime="20171227 04:33:05.081"></status>
 </kw>
 <kw name="Log Step" library="keywords">
 <doc>Steps logger</doc>
 <arguments>
 <arg>=== Step 5. Get not enabled service for client ===</arg>
 </arguments>
-<msg timestamp="20171207 08:57:24.582" level="INFO">
-2017-12-07 08:57:24.582: === Step 5. Get not enabled service for client ===</msg>
-<status status="PASS" endtime="20171207 08:57:24.582" starttime="20171207 08:57:24.581"></status>
+<msg timestamp="20171227 04:33:05.087" level="INFO">
+2017-12-27 04:33:05.087: === Step 5. Get not enabled service for client ===</msg>
+<status status="PASS" endtime="20171227 04:33:05.088" starttime="20171227 04:33:05.085"></status>
 </kw>
 <kw name="Get Not Enabled Service Id" library="keywords">
 <doc>Function to get id of not enabled service</doc>
@@ -133,8 +133,8 @@
 <assign>
 <var>${not_enabled_service_id}</var>
 </assign>
-<msg timestamp="20171207 08:57:24.582" level="INFO">${not_enabled_service_id} = 3</msg>
-<status status="PASS" endtime="20171207 08:57:24.582" starttime="20171207 08:57:24.582"></status>
+<msg timestamp="20171227 04:33:05.088" level="INFO">${not_enabled_service_id} = 3</msg>
+<status status="PASS" endtime="20171227 04:33:05.089" starttime="20171227 04:33:05.088"></status>
 </kw>
 <kw name="Get Service Cost" library="keywords">
 <doc>Function to get cost of service</doc>
@@ -144,18 +144,18 @@
 <assign>
 <var>${not_enabled_service_cost}</var>
 </assign>
-<msg timestamp="20171207 08:57:24.584" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:24.592" level="INFO">${not_enabled_service_cost} = 0.15</msg>
-<status status="PASS" endtime="20171207 08:57:24.592" starttime="20171207 08:57:24.582"></status>
+<msg timestamp="20171227 04:33:05.090" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171227 04:33:05.092" level="INFO">${not_enabled_service_cost} = 0.15</msg>
+<status status="PASS" endtime="20171227 04:33:05.092" starttime="20171227 04:33:05.089"></status>
 </kw>
 <kw name="Log Step" library="keywords">
 <doc>Steps logger</doc>
 <arguments>
 <arg>=== Step 6. Enable service for client ===</arg>
 </arguments>
-<msg timestamp="20171207 08:57:24.593" level="INFO">
-2017-12-07 08:57:24.593: === Step 6. Enable service for client ===</msg>
-<status status="PASS" endtime="20171207 08:57:24.593" starttime="20171207 08:57:24.593"></status>
+<msg timestamp="20171227 04:33:05.094" level="INFO">
+2017-12-27 04:33:05.094: === Step 6. Enable service for client ===</msg>
+<status status="PASS" endtime="20171227 04:33:05.096" starttime="20171227 04:33:05.093"></status>
 </kw>
 <kw name="Enable Service For Client Id" library="keywords">
 <doc>Function to set service enabled for specified client</doc>
@@ -166,9 +166,9 @@
 <assign>
 <var>${ex_code}</var>
 </assign>
-<msg timestamp="20171207 08:57:24.594" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:24.598" level="INFO">${ex_code} = 202</msg>
-<status status="PASS" endtime="20171207 08:57:24.599" starttime="20171207 08:57:24.593"></status>
+<msg timestamp="20171227 04:33:05.097" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171227 04:33:05.129" level="INFO">${ex_code} = 202</msg>
+<status status="PASS" endtime="20171227 04:33:05.129" starttime="20171227 04:33:05.096"></status>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to integers.</doc>
@@ -176,19 +176,19 @@
 <arg>${ex_code}</arg>
 <arg>202</arg>
 </arguments>
-<msg timestamp="20171207 08:57:24.599" level="INFO">Argument types are:
+<msg timestamp="20171227 04:33:05.130" level="INFO">Argument types are:
 &lt;type 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20171207 08:57:24.599" starttime="20171207 08:57:24.599"></status>
+<status status="PASS" endtime="20171227 04:33:05.130" starttime="20171227 04:33:05.130"></status>
 </kw>
 <kw name="Log Step" library="keywords">
 <doc>Steps logger</doc>
 <arguments>
 <arg>=== Step 7. Wait for service is enabled ===</arg>
 </arguments>
-<msg timestamp="20171207 08:57:24.600" level="INFO">
-2017-12-07 08:57:24.600: === Step 7. Wait for service is enabled ===</msg>
-<status status="PASS" endtime="20171207 08:57:24.600" starttime="20171207 08:57:24.599"></status>
+<msg timestamp="20171227 04:33:05.139" level="INFO">
+2017-12-27 04:33:05.139: === Step 7. Wait for service is enabled ===</msg>
+<status status="PASS" endtime="20171227 04:33:05.141" starttime="20171227 04:33:05.130"></status>
 </kw>
 <kw name="Wait For Service Is Enabled" library="keywords">
 <doc>Function to wait until service is enabled for specified client</doc>
@@ -198,172 +198,62 @@
 <arg>top_attempts=30</arg>
 <arg>sleep_time=2</arg>
 </arguments>
-<msg timestamp="20171207 08:57:24.600" level="INFO">
-2017-12-07 08:57:24.600: Start waiting for service 3 is enabled for client 3</msg>
-<msg timestamp="20171207 08:57:24.601" level="INFO">
-2017-12-07 08:57:24.600: 30 attempts left</msg>
-<msg timestamp="20171207 08:57:24.601" level="INFO">
-2017-12-07 08:57:24.601: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:24.602" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:24.606" level="INFO">
-2017-12-07 08:57:24.606: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:24.606" level="INFO">
-2017-12-07 08:57:24.606: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:24.606" level="INFO">
-2017-12-07 08:57:24.606: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:26.608" level="INFO">
-2017-12-07 08:57:26.607: 29 attempts left</msg>
-<msg timestamp="20171207 08:57:26.608" level="INFO">
-2017-12-07 08:57:26.608: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:26.609" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:26.611" level="INFO">
-2017-12-07 08:57:26.611: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:26.611" level="INFO">
-2017-12-07 08:57:26.611: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:26.612" level="INFO">
-2017-12-07 08:57:26.612: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:28.612" level="INFO">
-2017-12-07 08:57:28.612: 28 attempts left</msg>
-<msg timestamp="20171207 08:57:28.612" level="INFO">
-2017-12-07 08:57:28.612: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:28.613" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:28.617" level="INFO">
-2017-12-07 08:57:28.617: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:28.617" level="INFO">
-2017-12-07 08:57:28.617: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:28.617" level="INFO">
-2017-12-07 08:57:28.617: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:30.617" level="INFO">
-2017-12-07 08:57:30.617: 27 attempts left</msg>
-<msg timestamp="20171207 08:57:30.617" level="INFO">
-2017-12-07 08:57:30.617: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:30.618" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:30.621" level="INFO">
-2017-12-07 08:57:30.621: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:30.621" level="INFO">
-2017-12-07 08:57:30.621: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:30.621" level="INFO">
-2017-12-07 08:57:30.621: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:32.623" level="INFO">
-2017-12-07 08:57:32.623: 26 attempts left</msg>
-<msg timestamp="20171207 08:57:32.623" level="INFO">
-2017-12-07 08:57:32.623: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:32.624" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:32.626" level="INFO">
-2017-12-07 08:57:32.626: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:32.627" level="INFO">
-2017-12-07 08:57:32.627: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:32.627" level="INFO">
-2017-12-07 08:57:32.627: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:34.629" level="INFO">
-2017-12-07 08:57:34.629: 25 attempts left</msg>
-<msg timestamp="20171207 08:57:34.629" level="INFO">
-2017-12-07 08:57:34.629: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:34.630" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:34.633" level="INFO">
-2017-12-07 08:57:34.633: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:34.634" level="INFO">
-2017-12-07 08:57:34.633: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:34.634" level="INFO">
-2017-12-07 08:57:34.634: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:36.634" level="INFO">
-2017-12-07 08:57:36.634: 24 attempts left</msg>
-<msg timestamp="20171207 08:57:36.634" level="INFO">
-2017-12-07 08:57:36.634: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:36.635" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:36.638" level="INFO">
-2017-12-07 08:57:36.638: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:36.638" level="INFO">
-2017-12-07 08:57:36.638: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:36.638" level="INFO">
-2017-12-07 08:57:36.638: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:38.638" level="INFO">
-2017-12-07 08:57:38.638: 23 attempts left</msg>
-<msg timestamp="20171207 08:57:38.639" level="INFO">
-2017-12-07 08:57:38.639: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:38.639" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:38.642" level="INFO">
-2017-12-07 08:57:38.642: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:38.642" level="INFO">
-2017-12-07 08:57:38.642: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:38.642" level="INFO">
-2017-12-07 08:57:38.642: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:40.643" level="INFO">
-2017-12-07 08:57:40.643: 22 attempts left</msg>
-<msg timestamp="20171207 08:57:40.643" level="INFO">
-2017-12-07 08:57:40.643: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:40.644" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:40.647" level="INFO">
-2017-12-07 08:57:40.647: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:40.647" level="INFO">
-2017-12-07 08:57:40.647: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:40.647" level="INFO">
-2017-12-07 08:57:40.647: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:42.648" level="INFO">
-2017-12-07 08:57:42.648: 21 attempts left</msg>
-<msg timestamp="20171207 08:57:42.649" level="INFO">
-2017-12-07 08:57:42.649: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:42.649" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:42.652" level="INFO">
-2017-12-07 08:57:42.652: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:42.652" level="INFO">
-2017-12-07 08:57:42.652: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:42.652" level="INFO">
-2017-12-07 08:57:42.652: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:44.653" level="INFO">
-2017-12-07 08:57:44.652: 20 attempts left</msg>
-<msg timestamp="20171207 08:57:44.653" level="INFO">
-2017-12-07 08:57:44.653: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:44.654" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:44.656" level="INFO">
-2017-12-07 08:57:44.656: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:44.657" level="INFO">
-2017-12-07 08:57:44.656: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:44.657" level="INFO">
-2017-12-07 08:57:44.657: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:46.659" level="INFO">
-2017-12-07 08:57:46.659: 19 attempts left</msg>
-<msg timestamp="20171207 08:57:46.660" level="INFO">
-2017-12-07 08:57:46.660: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:46.660" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:46.664" level="INFO">
-2017-12-07 08:57:46.664: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:46.664" level="INFO">
-2017-12-07 08:57:46.664: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:46.665" level="INFO">
-2017-12-07 08:57:46.665: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:48.665" level="INFO">
-2017-12-07 08:57:48.665: 18 attempts left</msg>
-<msg timestamp="20171207 08:57:48.665" level="INFO">
-2017-12-07 08:57:48.665: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:48.666" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:48.669" level="INFO">
-2017-12-07 08:57:48.669: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:48.669" level="INFO">
-2017-12-07 08:57:48.669: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:48.670" level="INFO">
-2017-12-07 08:57:48.670: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:50.672" level="INFO">
-2017-12-07 08:57:50.672: 17 attempts left</msg>
-<msg timestamp="20171207 08:57:50.672" level="INFO">
-2017-12-07 08:57:50.672: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:50.673" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:50.675" level="INFO">
-2017-12-07 08:57:50.675: Checking service 3 in client enabled services [1]</msg>
-<msg timestamp="20171207 08:57:50.675" level="INFO">
-2017-12-07 08:57:50.675: Service 3 is not enabled for this client</msg>
-<msg timestamp="20171207 08:57:50.675" level="INFO">
-2017-12-07 08:57:50.675: Waiting 2 seconds...</msg>
-<msg timestamp="20171207 08:57:52.677" level="INFO">
-2017-12-07 08:57:52.677: 16 attempts left</msg>
-<msg timestamp="20171207 08:57:52.677" level="INFO">
-2017-12-07 08:57:52.677: Checking service 3 in client 3 enabled services</msg>
-<msg timestamp="20171207 08:57:52.678" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:52.681" level="INFO">
-2017-12-07 08:57:52.681: Checking service 3 in client enabled services [1, 3]</msg>
-<msg timestamp="20171207 08:57:52.681" level="INFO">
-2017-12-07 08:57:52.681: Service 3 is enabled for client 3</msg>
-<status status="PASS" endtime="20171207 08:57:52.681" starttime="20171207 08:57:24.600"></status>
+<msg timestamp="20171227 04:33:05.142" level="INFO">
+2017-12-27 04:33:05.142: Start waiting for service 3 is enabled for client 3</msg>
+<msg timestamp="20171227 04:33:05.143" level="INFO">
+2017-12-27 04:33:05.143: 30 attempts left</msg>
+<msg timestamp="20171227 04:33:05.144" level="INFO">
+2017-12-27 04:33:05.144: Checking service 3 in client 3 enabled services</msg>
+<msg timestamp="20171227 04:33:05.146" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171227 04:33:05.149" level="INFO">
+2017-12-27 04:33:05.149: Checking service 3 in client enabled services [1]</msg>
+<msg timestamp="20171227 04:33:05.150" level="INFO">
+2017-12-27 04:33:05.150: Service 3 is not enabled for this client</msg>
+<msg timestamp="20171227 04:33:05.151" level="INFO">
+2017-12-27 04:33:05.151: Waiting 2 seconds...</msg>
+<msg timestamp="20171227 04:33:07.154" level="INFO">
+2017-12-27 04:33:07.154: 29 attempts left</msg>
+<msg timestamp="20171227 04:33:07.155" level="INFO">
+2017-12-27 04:33:07.155: Checking service 3 in client 3 enabled services</msg>
+<msg timestamp="20171227 04:33:07.157" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171227 04:33:07.160" level="INFO">
+2017-12-27 04:33:07.160: Checking service 3 in client enabled services [1]</msg>
+<msg timestamp="20171227 04:33:07.161" level="INFO">
+2017-12-27 04:33:07.161: Service 3 is not enabled for this client</msg>
+<msg timestamp="20171227 04:33:07.162" level="INFO">
+2017-12-27 04:33:07.162: Waiting 2 seconds...</msg>
+<msg timestamp="20171227 04:33:09.166" level="INFO">
+2017-12-27 04:33:09.166: 28 attempts left</msg>
+<msg timestamp="20171227 04:33:09.167" level="INFO">
+2017-12-27 04:33:09.167: Checking service 3 in client 3 enabled services</msg>
+<msg timestamp="20171227 04:33:09.169" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171227 04:33:09.172" level="INFO">
+2017-12-27 04:33:09.172: Checking service 3 in client enabled services [1]</msg>
+<msg timestamp="20171227 04:33:09.174" level="INFO">
+2017-12-27 04:33:09.173: Service 3 is not enabled for this client</msg>
+<msg timestamp="20171227 04:33:09.175" level="INFO">
+2017-12-27 04:33:09.175: Waiting 2 seconds...</msg>
+<msg timestamp="20171227 04:33:11.179" level="INFO">
+2017-12-27 04:33:11.178: 27 attempts left</msg>
+<msg timestamp="20171227 04:33:11.180" level="INFO">
+2017-12-27 04:33:11.180: Checking service 3 in client 3 enabled services</msg>
+<msg timestamp="20171227 04:33:11.182" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171227 04:33:11.184" level="INFO">
+2017-12-27 04:33:11.184: Checking service 3 in client enabled services [1]</msg>
+<msg timestamp="20171227 04:33:11.185" level="INFO">
+2017-12-27 04:33:11.185: Service 3 is not enabled for this client</msg>
+<msg timestamp="20171227 04:33:11.187" level="INFO">
+2017-12-27 04:33:11.187: Waiting 2 seconds...</msg>
+<msg timestamp="20171227 04:33:13.190" level="INFO">
+2017-12-27 04:33:13.190: 26 attempts left</msg>
+<msg timestamp="20171227 04:33:13.191" level="INFO">
+2017-12-27 04:33:13.191: Checking service 3 in client 3 enabled services</msg>
+<msg timestamp="20171227 04:33:13.194" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171227 04:33:13.196" level="INFO">
+2017-12-27 04:33:13.196: Checking service 3 in client enabled services [1, 3]</msg>
+<msg timestamp="20171227 04:33:13.197" level="INFO">
+2017-12-27 04:33:13.197: Service 3 is enabled for client 3</msg>
+<status status="PASS" endtime="20171227 04:33:13.199" starttime="20171227 04:33:05.141"></status>
 </kw>
 <kw name="Get Client Services" library="keywords">
 <doc>Function to get clients enabled services</doc>
@@ -373,18 +263,18 @@
 <assign>
 <var>${enabled_services2}</var>
 </assign>
-<msg timestamp="20171207 08:57:52.682" level="INFO">Starting new HTTP connection (1): localhost</msg>
-<msg timestamp="20171207 08:57:52.685" level="INFO">${enabled_services2} = [1, 3]</msg>
-<status status="PASS" endtime="20171207 08:57:52.685" starttime="20171207 08:57:52.681"></status>
+<msg timestamp="20171227 04:33:13.200" level="INFO">Starting new HTTP connection (1): localhost</msg>
+<msg timestamp="20171227 04:33:13.202" level="INFO">${enabled_services2} = [1, 3]</msg>
+<status status="PASS" endtime="20171227 04:33:13.202" starttime="20171227 04:33:13.199"></status>
 </kw>
 <kw name="Log Step" library="keywords">
 <doc>Steps logger</doc>
 <arguments>
 <arg>=== Step 8. Get client balance ===</arg>
 </arguments>
-<msg timestamp="20171207 08:57:52.686" level="INFO">
-2017-12-07 08:57:52.686: === Step 8. Get client balance ===</msg>
-<status status="PASS" endtime="20171207 08:57:52.686" starttime="20171207 08:57:52.685"></status>
+<msg timestamp="20171227 04:33:13.205" level="INFO">
+2017-12-27 04:33:13.205: === Step 8. Get client balance ===</msg>
+<status status="PASS" endtime="20171227 04:33:13.206" starttime="20171227 04:33:13.202"></status>
 </kw>
 <kw name="Select Clients Balance" library="keywords">
 <doc>Function to get client balance</doc>
@@ -395,19 +285,19 @@
 <assign>
 <var>${final_client_balance}</var>
 </assign>
-<msg timestamp="20171207 08:57:52.686" level="INFO">
-2017-12-07 08:57:52.686: Selecting balance for client with client_id=3...</msg>
-<msg timestamp="20171207 08:57:52.694" level="INFO">${final_client_balance} = 3.5</msg>
-<status status="PASS" endtime="20171207 08:57:52.694" starttime="20171207 08:57:52.686"></status>
+<msg timestamp="20171227 04:33:13.207" level="INFO">
+2017-12-27 04:33:13.207: Selecting balance for client with client_id=3...</msg>
+<msg timestamp="20171227 04:33:13.210" level="INFO">${final_client_balance} = 3.5</msg>
+<status status="PASS" endtime="20171227 04:33:13.210" starttime="20171227 04:33:13.207"></status>
 </kw>
 <kw name="Log Step" library="keywords">
 <doc>Steps logger</doc>
 <arguments>
 <arg>=== Step 9. Check that balance is correct ===</arg>
 </arguments>
-<msg timestamp="20171207 08:57:52.694" level="INFO">
-2017-12-07 08:57:52.694: === Step 9. Check that balance is correct ===</msg>
-<status status="PASS" endtime="20171207 08:57:52.694" starttime="20171207 08:57:52.694"></status>
+<msg timestamp="20171227 04:33:13.212" level="INFO">
+2017-12-27 04:33:13.212: === Step 9. Check that balance is correct ===</msg>
+<status status="PASS" endtime="20171227 04:33:13.213" starttime="20171227 04:33:13.210"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -417,8 +307,8 @@
 <assign>
 <var>${calc_final_balance}</var>
 </assign>
-<msg timestamp="20171207 08:57:52.695" level="INFO">${calc_final_balance} = 3.35</msg>
-<status status="PASS" endtime="20171207 08:57:52.695" starttime="20171207 08:57:52.694"></status>
+<msg timestamp="20171227 04:33:13.214" level="INFO">${calc_final_balance} = 3.35</msg>
+<status status="PASS" endtime="20171227 04:33:13.214" starttime="20171227 04:33:13.213"></status>
 </kw>
 <kw name="Compare Results" library="keywords">
 <doc>Function to compare actual result with expected result</doc>
@@ -426,30 +316,77 @@
 <arg>${final_client_balance}</arg>
 <arg>${calc_final_balance}</arg>
 </arguments>
-<msg timestamp="20171207 08:57:52.695" level="INFO">
-2017-12-07 08:57:52.695: Compare actual result 3.5 with calculated result 3.35</msg>
-<msg timestamp="20171207 08:57:52.695" level="INFO">
-2017-12-07 08:57:52.695: 3.5 and 3.35 should be equal</msg>
-<msg timestamp="20171207 08:57:52.699" level="FAIL">MyError: 3.5 != 3.35, but should</msg>
-<status status="FAIL" endtime="20171207 08:57:52.699" starttime="20171207 08:57:52.695"></status>
+<msg timestamp="20171227 04:33:13.215" level="INFO">
+2017-12-27 04:33:13.215: Compare actual result 3.5 with calculated result 3.35</msg>
+<msg timestamp="20171227 04:33:13.216" level="INFO">
+2017-12-27 04:33:13.216: 3.5 and 3.35 should be equal</msg>
+<msg timestamp="20171227 04:33:13.219" level="FAIL">MyError: 3.5 != 3.35, but should</msg>
+<status status="FAIL" endtime="20171227 04:33:13.219" starttime="20171227 04:33:13.214"></status>
 </kw>
 <kw type="teardown" name="Main Test Teardown" library="Setup_teardown">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Starting Test case Teardown\n</arg>
+</arguments>
+<status status="PASS" endtime="20171227 04:33:13.221" starttime="20171227 04:33:13.220"></status>
+</kw>
 <kw name="Stop Application" library="keywords">
 <doc>Main teardown function for test case</doc>
-<msg timestamp="20171207 08:57:52.700" level="INFO">
-2017-12-07 08:57:52.700: Stopping 'testing_web_1' application...</msg>
-<msg timestamp="20171207 08:57:52.701" level="INFO">
-2017-12-07 08:57:52.700: Executing 'docker-compose down' command...</msg>
-<msg timestamp="20171207 08:58:03.242" level="INFO">
-2017-12-07 08:58:03.241: Application successfully stopped</msg>
-<status status="PASS" endtime="20171207 08:58:03.242" starttime="20171207 08:57:52.700"></status>
+<msg timestamp="20171227 04:33:13.221" level="INFO">
+2017-12-27 04:33:13.221: Stopping 'testing_web_1' application...</msg>
+<msg timestamp="20171227 04:33:13.223" level="INFO">
+2017-12-27 04:33:13.223: Executing 'docker-compose down' command...</msg>
+<msg timestamp="20171227 04:33:24.115" level="INFO">
+2017-12-27 04:33:24.115: Application successfully stopped</msg>
+<status status="PASS" endtime="20171227 04:33:24.117" starttime="20171227 04:33:13.221"></status>
 </kw>
-<status status="PASS" endtime="20171207 08:58:03.242" starttime="20171207 08:57:52.700"></status>
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>log to console</arg>
+<arg>FAIL ${TEST NAME}\n\n</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>FAIL ${TEST NAME}\n\n</arg>
+</arguments>
+<status status="PASS" endtime="20171227 04:33:24.119" starttime="20171227 04:33:24.117"></status>
 </kw>
-<status status="FAIL" endtime="20171207 08:58:03.242" critical="yes" starttime="20171207 08:57:23.698">MyError: 3.5 != 3.35, but should</status>
+<status status="PASS" endtime="20171227 04:33:24.119" starttime="20171227 04:33:24.117"></status>
+</kw>
+<kw name="Run Keyword If Test Passed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<arguments>
+<arg>log to console</arg>
+<arg>PASS ${TEST NAME}\n\n</arg>
+</arguments>
+<status status="PASS" endtime="20171227 04:33:24.120" starttime="20171227 04:33:24.119"></status>
+</kw>
+<status status="PASS" endtime="20171227 04:33:24.120" starttime="20171227 04:33:13.220"></status>
+</kw>
+<tags>
+<tag>TC0001</tag>
+</tags>
+<status status="FAIL" endtime="20171227 04:33:24.121" critical="yes" starttime="20171227 04:33:04.108">MyError: 3.5 != 3.35, but should</status>
 </test>
+<kw type="teardown" name="Main Teardown" library="Setup_teardown">
+<kw name="Email Results" library="keywords">
+<arguments>
+<arg>sender_email=database_testing@mail.com</arg>
+<arg>recipients_email=cilicium_2@mail.ru</arg>
+<arg>path_to_log=/home/andrei/testing_task/framework/logs/log.html</arg>
+<arg>result=${SUITE STATUS}</arg>
+</arguments>
+<msg timestamp="20171227 04:33:24.755" level="FAIL">SMTPAuthenticationError: (535, '5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials t81sm1210280lff.84 - gsmtp')</msg>
+<status status="FAIL" endtime="20171227 04:33:24.755" starttime="20171227 04:33:24.125"></status>
+</kw>
+<status status="FAIL" endtime="20171227 04:33:24.756" starttime="20171227 04:33:24.125">SMTPAuthenticationError: (535, '5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials t81sm1210280lff.84 - gsmtp')</status>
+</kw>
 <doc>Suite description</doc>
-<status status="FAIL" endtime="20171207 08:58:03.243" starttime="20171207 08:57:23.609"></status>
+<status status="FAIL" endtime="20171227 04:33:24.756" starttime="20171227 04:33:04.016">Suite teardown failed:
+SMTPAuthenticationError: (535, '5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials t81sm1210280lff.84 - gsmtp')</status>
 </suite>
 <statistics>
 <total>
@@ -457,6 +394,7 @@
 <stat fail="1" pass="0">All Tests</stat>
 </total>
 <tag>
+<stat fail="1" pass="0">TC0001</stat>
 </tag>
 <suite>
 <stat fail="1" id="s1" name="TS001" pass="0">TS001</stat>
