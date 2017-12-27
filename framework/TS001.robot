@@ -2,9 +2,9 @@
 Documentation    Suite description
 Library  Collections
 Library  keywords.py
-Resource  Setup_teardown.robot
-Test Setup  Main Test Setup
-Test Teardown  Main Test Teardown
+#Resource  Setup_teardown.robot
+#Test Setup  Main Test Setup
+#Test Teardown  Main Test Teardown
 #Suite Teardown  Main Teardown
 
 *** Test Cases ***
