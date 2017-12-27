@@ -59,7 +59,7 @@ def start_application():
     logger_debug(subprocess_send_command('pwd'))
     os.chdir("{0}/testing".format(path))
     logger_debug(subprocess_send_command('pwd'))
-    logger_debug(subprocess_send_command('ls'))
+    logger_debug(subprocess_send_command(['ls', '-la']))
     logger_debug("Executing 'docker-compose build' command...")
     subprocess_send_command(["docker-compose", "build"])
     logger_debug("Executing 'docker-compose up -d' command...")
