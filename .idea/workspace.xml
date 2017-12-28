@@ -15,8 +15,8 @@
       <file leaf-file-name="python_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/framework/python_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="49" column="32" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="32" />
+            <state relative-caret-position="439">
+              <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -24,24 +24,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="keywords.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="keywords.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/framework/keywords.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2750">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="4538">
+              <caret line="224" column="37" lean-forward="true" selection-start-line="224" selection-start-column="37" selection-end-line="224" selection-end-column="37" />
+              <folding>
+                <element signature="e#59#73#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TS001.robot" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TS001.robot" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/framework/TS001.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-127">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="748">
+              <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
               <folding>
                 <element signature="e#0#186#0" expanded="true" />
-                <marker date="1514375489803" expanded="false" signature="0:51" ph="*** Settings ***" />
+                <marker date="1514447216068" expanded="false" signature="0:51" ph="*** Settings ***" />
               </folding>
             </state>
           </provider>
@@ -79,11 +81,11 @@
         <option value="$PROJECT_DIR$/framework/__init__.py" />
         <option value="$PROJECT_DIR$/framework/test_suites/TS001.robot" />
         <option value="$PROJECT_DIR$/framework/1.py" />
-        <option value="$PROJECT_DIR$/framework/python_functions.py" />
         <option value="$PROJECT_DIR$/framework/Setup/setup_teardown.robot" />
         <option value="$PROJECT_DIR$/framework/setup_teardown.robot" />
         <option value="$PROJECT_DIR$/framework/Setup_teardown.robot" />
         <option value="$PROJECT_DIR$/framework/keywords.py" />
+        <option value="$PROJECT_DIR$/framework/python_functions.py" />
         <option value="$PROJECT_DIR$/framework/TS001.robot" />
       </list>
     </option>
@@ -331,7 +333,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8175">
           <caret line="327" column="49" lean-forward="true" selection-start-line="327" selection-start-column="49" selection-end-line="327" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -352,7 +356,7 @@
           <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
           <folding>
             <element signature="e#0#186#0" expanded="true" />
-            <marker date="1514375489803" expanded="false" signature="0:51" ph="*** Settings ***" />
+            <marker date="1514447216068" expanded="false" signature="0:51" ph="*** Settings ***" />
           </folding>
         </state>
       </provider>
@@ -373,7 +377,7 @@
           <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
           <folding>
             <element signature="e#0#186#0" expanded="true" />
-            <marker date="1514375489803" expanded="false" signature="0:51" ph="*** Settings ***" />
+            <marker date="1514447216068" expanded="false" signature="0:51" ph="*** Settings ***" />
           </folding>
         </state>
       </provider>
@@ -393,7 +397,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7250">
           <caret line="299" column="67" lean-forward="true" selection-start-line="299" selection-start-column="67" selection-end-line="299" selection-end-column="67" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -411,7 +417,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -429,7 +437,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -447,7 +457,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -465,7 +477,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -483,7 +497,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -558,7 +574,7 @@
           <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
           <folding>
             <element signature="e#0#186#0" expanded="true" />
-            <marker date="1514375489803" expanded="false" signature="0:51" ph="*** Settings ***" />
+            <marker date="1514447216068" expanded="false" signature="0:51" ph="*** Settings ***" />
           </folding>
         </state>
       </provider>
@@ -567,7 +583,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -585,7 +603,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -603,7 +623,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -621,7 +643,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -639,7 +663,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -657,7 +683,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -705,24 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/python_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="49" column="32" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/keywords.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2750">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/Setup_teardown.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -734,13 +744,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/framework/python_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/framework/TS001.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="748">
+          <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
           <folding>
             <element signature="e#0#186#0" expanded="true" />
-            <marker date="1514375489803" expanded="false" signature="0:51" ph="*** Settings ***" />
+            <marker date="1514447216068" expanded="false" signature="0:51" ph="*** Settings ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/keywords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4538">
+          <caret line="224" column="37" lean-forward="true" selection-start-line="224" selection-start-column="37" selection-end-line="224" selection-end-column="37" />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
           </folding>
         </state>
       </provider>

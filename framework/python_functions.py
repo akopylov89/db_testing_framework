@@ -60,7 +60,7 @@ class CheckClientServicesRequestSender(BaseRequestSender):
     def __init__(self, body):
         super(CheckClientServicesRequestSender, self)\
             .__init__(body=None,
-                      request_type='POST',
-                      url='http://localhost:5000/client/services')
+                      request_type="POST",
+                      url="http://localhost:5000/client/services")
         self.body = body
 

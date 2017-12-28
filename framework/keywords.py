@@ -56,11 +56,7 @@ def start_application():
     """Main setup function for test case"""
     logger_debug("Starting 'testing_web_1' application...")
     path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    logger_debug(subprocess_send_command('pwd'))
     os.chdir("{0}/testing".format(path))
-    logger_debug(subprocess_send_command('pwd'))
-    logger_debug(subprocess_send_command(['ls']))
-    logger_debug(subprocess_send_command('pwd'))
     logger_debug("Executing 'docker-compose build' command...")
     subprocess_send_command(["docker-compose", "build"])
     logger_debug("Executing 'docker-compose up -d' command...")
@@ -72,9 +68,7 @@ def stop_application():
     """Main teardown function for test case"""
     logger_debug("Stopping 'testing_web_1' application...")
     path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    logger_debug(subprocess_send_command('pwd'))
     os.chdir("{0}/testing".format(path))
-    logger_debug(subprocess_send_command('pwd'))
     logger_debug("Executing 'docker-compose down' command...")
     subprocess_send_command(["docker-compose", "down"])
     logger_debug("Application successfully stopped")
@@ -229,7 +223,7 @@ def create_client_with_positive_balance(database, balance):
 def get_client_services(client_id):
     """Function to get clients enabled services"""
     output = json.loads(CheckClientServicesRequestSender
-                        ({'client_id': int(client_id)}).send_message().text)
+                        ({"client_id": int(client_id)}).send_message().text)
     enabled_services = list()
     if output:
         if int(output['count']) > 0:
